@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.edu.gdqy.Tool.ImageTextGroupView
+        android:id="@+id/FM_BottonNavigation_HomePage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <com.edu.gdqy.Tool.ImageTextGroupView
+        android:id="@+id/FM_BottonNavigation_Square"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <com.edu.gdqy.Tool.ImageTextGroupView
+        android:id="@+id/FM_BottonNavigation_Subscriber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <com.edu.gdqy.Tool.ImageTextGroupView
+        android:id="@+id/FM_BottonNavigation_My"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+</LinearLayout>
