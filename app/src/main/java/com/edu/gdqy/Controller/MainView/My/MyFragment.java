@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.edu.gdqy.Controller.LiveWatcherView.WatcherViewActivity;
 import com.edu.gdqy.Controller.LoginRegisterView.LoginRegisterActivity;
 import com.edu.gdqy.Controller.R;
 import com.edu.gdqy.Tool.CircularHeadportrait;
@@ -80,7 +81,11 @@ public class MyFragment extends Fragment {
                 break;
             case R.id.FM_My_History:
                 break;
+
+            //测试
             case R.id.FM_My_Manager:
+                jumpActivity(WatcherViewActivity.class);
+
                 break;
             case R.id.FM_My_Release:
                 jumpActivity(ReleaseNoticeActivity.class);
