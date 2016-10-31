@@ -1,5 +1,6 @@
 package com.edu.gdqy.Controller.LiveWatcherView.adapter;
 
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -26,6 +27,10 @@ public class MyAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
+        for(int i=0; i < 3; i++){
+            Log.d("dake", String.valueOf(i));
+        }
         return null;
     }
 }
