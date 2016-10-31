@@ -22,8 +22,6 @@
         <activity android:name=".MainView.My.ReleaseNoticeActivity" />
 
         <activity android:name=".LoginRegisterView.LoginRegisterActivity" />
-
-        <activity android:name=".LiveWatcherView.WatcherViewActivity"/>
     </application>
 
 </manifest>
