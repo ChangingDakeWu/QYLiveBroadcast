@@ -39,6 +39,8 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import static com.edu.gdqy.Controller.R.id.tvSendone;
+
 /**
  * Created by WDK on 2016/10/27.
  */
@@ -72,14 +74,20 @@ public class LayerFragment extends Fragment implements View.OnClickListener {
     private TextView tvdate;
     private LinearLayout llgiftcontent;
     private ListView lvmessage;
+    private EditText etInput;
+    private TextView sendInput;
+    private LinearLayout llInputParent;
+
+    /*private TextView tvChat;
     private TextView tvSendone;
     private TextView tvSendtwo;
     private TextView tvSendthree;
-    private TextView tvSendfor;
-    private EditText etInput;
-    private TextView tvChat;
-    private TextView sendInput;
-    private LinearLayout llInputParent;
+    private TextView tvSendfor;*/
+
+    private CustomRoundView tvChat;
+    private CustomRoundView tvSendLike;
+    private CustomRoundView tvSendGits;
+    private CustomRoundView tvShare;
 
     /**
      * 动画相关
@@ -108,19 +116,32 @@ public class LayerFragment extends Fragment implements View.OnClickListener {
         tvdate = (TextView) view.findViewById(R.id.tvdate);
         llgiftcontent = (LinearLayout) view.findViewById(R.id.llgiftcontent);
         lvmessage = (ListView) view.findViewById(R.id.lvmessage);
-        tvChat = (TextView) view.findViewById(R.id.tvChat);
+
+         //底部bottom
+        /*tvChat = (TextView) view.findViewById(R.id.tvChat);
         tvSendone = (TextView) view.findViewById(R.id.tvSendone);
         tvSendtwo = (TextView) view.findViewById(R.id.tvSendtwo);
         tvSendthree = (TextView) view.findViewById(R.id.tvSendthree);
-        tvSendfor = (TextView) view.findViewById(R.id.tvSendfor);
+        tvSendfor = (TextView) view.findViewById(tvSendfor);*/
+
+
+        tvChat = (CustomRoundView) view.findViewById(R.id.tvChat);
+        tvSendLike = (CustomRoundView) view.findViewById(R.id.tvSendLike);
+        tvSendGits = (CustomRoundView) view.findViewById(R.id.tvSendGits);
+        tvShare = (CustomRoundView) view.findViewById(R.id.tvShare);
+
         llInputParent = (LinearLayout) view.findViewById(R.id.llinputparent);
         etInput = (EditText) view.findViewById(R.id.etInput);
         sendInput = (TextView) view.findViewById(R.id.sendInput);
+
+
         tvChat.setOnClickListener(this);
-        tvSendone.setOnClickListener(this);
-        tvSendtwo.setOnClickListener(this);
-        tvSendthree.setOnClickListener(this);
-        tvSendfor.setOnClickListener(this);
+        tvSendLike.setOnClickListener(this);
+        tvSendGits.setOnClickListener(this);
+        tvShare.setOnClickListener(this);
+        //tvSendfor.setOnClickListener(this);
+
+
         sendInput.setOnClickListener(this);
         inAnim = (TranslateAnimation) AnimationUtils.loadAnimation(getActivity(), R.anim.gift_in);
         outAnim = (TranslateAnimation) AnimationUtils.loadAnimation(getActivity(), R.anim.gift_out);
@@ -162,17 +183,14 @@ public class LayerFragment extends Fragment implements View.OnClickListener {
             case R.id.sendInput:/*发送*/
                 sendText();
                 break;
-            case R.id.tvSendone:/*礼物1*/
-                showGift("Johnny1");
+            case R.id.tvSendLike:/*礼物1*/
+                //showGift("Johnny1");
                 break;
-            case R.id.tvSendtwo:/*礼物2*/
-                showGift("Johnny2");
+            case R.id.tvSendGits:/*礼物2*/
+                showGift("dake");
                 break;
-            case R.id.tvSendthree:/*礼物3*/
-                showGift("Johnny3");
-                break;
-            case R.id.tvSendfor:/*礼物4*/
-                showGift("Johnny4");
+            case R.id.tvShare:/*礼物3*/
+                //分享功能
                 break;
         }
     }
