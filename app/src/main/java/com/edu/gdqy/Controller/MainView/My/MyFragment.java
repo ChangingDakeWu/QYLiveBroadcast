@@ -55,12 +55,16 @@ public class MyFragment extends Fragment {
     private void init() {
         mPhoto.setImageBitmap(CircularHeadportrait.toRoundBitmap(R.drawable.photo, getResources()));
 
+        mHistory.changeImageSize(100);
         mHistory.setImageIcon(R.drawable.history);
         mHistory.setTextName("记录");
+        mManager.changeImageSize(100);
         mManager.setImageIcon(R.drawable.manage);
         mManager.setTextName("云管理");
+        mRelease.changeImageSize(100);
         mRelease.setImageIcon(R.drawable.release_notice);
         mRelease.setTextName("直播预告");
+        mUpload.changeImageSize(100);
         mUpload.setImageIcon(R.drawable.upload);
         mUpload.setTextName("上传");
     }

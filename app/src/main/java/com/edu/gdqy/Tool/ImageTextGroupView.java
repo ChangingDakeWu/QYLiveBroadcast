@@ -3,6 +3,7 @@ package com.edu.gdqy.Tool;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -30,9 +31,14 @@ public class ImageTextGroupView extends LinearLayout{
         icon.setImageResource(iconId);
     }
 
-
     public void setTextName(String name){
         this.name.setText(name);
+    }
+
+    public void changeImageSize(int height){
+        ViewGroup.LayoutParams layoutParams=icon.getLayoutParams();
+        layoutParams.height=height;
+        icon.setLayoutParams(layoutParams);
     }
 
 }

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.edu.gdqy.Controller">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/qhway"
@@ -20,8 +22,11 @@
             android:name=".MainView.HomePage.SearchActivity"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity android:name=".MainView.My.ReleaseNoticeActivity" />
-
         <activity android:name=".LoginRegisterView.LoginRegisterActivity" />
+        <activity
+            android:name=".AnchorAudienceView.VideoOnDemandActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name="io.vov.vitamio.activity.InitActivity" />
     </application>
 
 </manifest>

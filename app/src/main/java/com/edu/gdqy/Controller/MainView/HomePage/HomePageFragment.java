@@ -19,6 +19,7 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.Toast;
 
+import com.edu.gdqy.Controller.AnchorAudienceView.VideoOnDemandActivity;
 import com.edu.gdqy.Controller.R;
 import com.edu.gdqy.Tool.VedioGridAdapter;
 import com.jude.rollviewpager.RollPagerView;
@@ -27,6 +28,7 @@ import com.xys.libzxing.zxing.activity.CaptureActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.OnItemClick;
 
 /**
  * Created by HXY on 2016/10/7.
@@ -82,7 +84,12 @@ public class HomePageFragment extends Fragment {
         mHotGrid.setAdapter(adapter1);
         VedioGridAdapter adapter2 = new VedioGridAdapter(getContext(), null, null);
         mProgrammingGrid.setAdapter(adapter2);
+    }
 
+    @OnItemClick(R.id.FM_Homepage_HotGrid)
+    public void onItemClick(AdapterView<?> parent, View v, int position, long id){
+        Intent intent = new Intent(getActivity(), VideoOnDemandActivity.class);
+        startActivity(intent);
     }
 
     @OnClick({R.id.FM_HomePage_Herald, R.id.FM_HomePage_TwoDimensionCode, R.id.FM_HomePage_Search})
