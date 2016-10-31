@@ -85,17 +85,13 @@ public class UploadActivity extends AppCompatActivity {
                 Uri uri = data.getData();
                 Cursor cursor = getContentResolver().query(uri, null, null,null, null);
                 cursor.moveToFirst();
+                String vedioName = cursor.getString(2); // 图片文件名称
                 String vedioPath = cursor.getString(1); // 图片文件路径
-                Log.w("TAG",vedioPath);
-                String path  = Environment.getExternalStorageDirectory().getPath();
+                Log.w("TAG",vedioPath+"/"+vedioName);
 
                 MediaMetadataRetriever media = new MediaMetadataRetriever();
-                Log.w("TAG",path+"/"+vedioPath);
-                media.setDataSource(path+"/"+vedioPath);
+                media.setDataSource(vedioPath+"/"+vedioName);
                 Bitmap frameAtTime = media.getFrameAtTime();
-                if (frameAtTime==null){
-                    Log.w("TAG","5201314");
-                }
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
