@@ -39,8 +39,6 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import static com.edu.gdqy.Controller.R.id.tvSendone;
-
 /**
  * Created by WDK on 2016/10/27.
  */
