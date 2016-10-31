@@ -60,5 +60,6 @@ public class MessageAdapter extends BaseAdapter {
 
     private final class ViewHolder {
         TextView tvcontent;
+        //dk
     }
 }
