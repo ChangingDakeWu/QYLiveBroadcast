@@ -1,1 +1,1 @@
-include ':app', ':libzxing', ':vitamio'
+include ':app', ':libzxing'

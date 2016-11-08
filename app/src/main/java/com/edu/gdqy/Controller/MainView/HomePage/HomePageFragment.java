@@ -19,7 +19,6 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.Toast;
 
-import com.edu.gdqy.Controller.AnchorAudienceView.VideoOnDemandActivity;
 import com.edu.gdqy.Controller.R;
 import com.edu.gdqy.Tool.VedioGridAdapter;
 import com.jude.rollviewpager.RollPagerView;
@@ -88,8 +87,8 @@ public class HomePageFragment extends Fragment {
 
     @OnItemClick(R.id.FM_Homepage_HotGrid)
     public void onItemClick(AdapterView<?> parent, View v, int position, long id){
-        Intent intent = new Intent(getActivity(), VideoOnDemandActivity.class);
-        startActivity(intent);
+        //Intent intent = new Intent(getActivity(), VideoOnDemandActivity.class);
+        //startActivity(intent);
     }
 
     @OnClick({R.id.FM_HomePage_Herald, R.id.FM_HomePage_TwoDimensionCode, R.id.FM_HomePage_Search})
